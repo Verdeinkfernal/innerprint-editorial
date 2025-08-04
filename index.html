@@ -4,21 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InnerPrint | Editorial de Transformación Interior</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Libros que reprograman tu subconsciente. Escritos desde la ciencia, el alma y la práctica. Inspirado en Joseph Murphy.">
+  <meta name="keywords" content="InnerPrint, reprogramación mental, subconsciente, abundancia, desarrollo personal, Joseph Murphy, libros transformación">
+  <meta name="author" content="Lenin F. Calle Altamirano">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="InnerPrint - Editorial de Transformación Interior">
+  <meta property="og:description" content="Libros que reprograman tu subconsciente. Escritos desde la ciencia, el alma y la práctica.">
+  <meta property="og:image" content="https://verdeinkfernal.github.io/innerprint-editorial/images/portada-riqueza.jpg">
+  <meta property="og:url" content="https://verdeinkfernal.github.io/innerprint-editorial/">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="android-chrome-192x192" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="android-chrome-512x512" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#2d3b2d">
+  <meta name="theme-color" content="#2d3b2d">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Animaciones AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="android-chrome-192x192" sizes="192x192" href="favicon/android-chrome-192x192">
-<link rel="android-chrome-512x512" sizes="512x512" href="favicon/android-chrome-512x512">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest"> <!-- opcional -->
-
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Menú de navegación -->
+  <nav class="navbar" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">InnerPrint</a>
+      <div class="nav-links">
+        <a href="#catalogo">Libros</a>
+        <a href="#youtube">YouTube</a>
+        <a href="#autor">Autor</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Portada -->
   <section class="hero" data-aos="fade-in">
@@ -29,8 +58,10 @@
         Libros que reprograman tu subconsciente.  
         Escritos desde la ciencia, el alma y la práctica.
       </p>
-      <a href="#catalogo" class="btn btn-primary">Ver libros</a>
-      <a href="https://www.youtube.com/channel/UCARzxLxD08G7SW6APoBVj-w" target="_blank" class="btn btn-secondary">Canal de YouTube</a>
+      <div class="buttons">
+        <a href="#catalogo" class="btn btn-primary">Ver libros</a>
+        <a href="https://www.youtube.com/channel/UCARzxLxD08G7SW6APoBVj-w" target="_blank" class="btn btn-secondary">Canal de YouTube</a>
+      </div>
     </div>
   </section>
 
@@ -160,12 +191,14 @@
   </footer>
 
   <!-- AOS Scroll Animations -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-quart',
-      once: true
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-quart',
+        once: true
+      });
     });
   </script>
 </body>

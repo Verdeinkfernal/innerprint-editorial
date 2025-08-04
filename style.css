@@ -1,10 +1,15 @@
-/* Reset básico */
+/* ==================== */
+/* 1. RESET BÁSICO */
+/* ==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==================== */
+/* 2. TIPOGRAFÍA Y CUERPO */
+/* ==================== */
 body {
   font-family: 'Lato', sans-serif;
   background: #F9F9F7;
@@ -13,13 +18,18 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ==================== */
+/* 3. CONTENEDOR GENERAL */
+/* ==================== */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Menú de navegación */
+/* ==================== */
+/* 4. MENÚ DE NAVEGACIÓN */
+/* ==================== */
 .navbar {
   background: #2D3B2D;
   color: white;
@@ -27,7 +37,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -59,9 +69,11 @@ body {
   color: #C6A961;
 }
 
-/* Portada */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+/* ==================== */
+/* 5. HERO SECTIONS */
+/* ==================== */
+.hero,
+.hero-rico {
   background-size: cover;
   background-position: center;
   color: white;
@@ -70,33 +82,71 @@ body {
   margin-top: -15px;
 }
 
-.hero h1 {
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=3000&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+  margin-top: -15px;
+}
+
+.hero-rico {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;           /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center;      /* Centra la imagen */
+  background-repeat: no-repeat;     /* 🔴 Evita que se repita */
+  background-attachment: fixed;     /* ✅ Hace que el fondo se "fije" al hacer scroll (opcional, pero muy bonito) */
+  background-color: #000;           /* Negro de respaldo por si la imagen no carga */
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.hero h1,
+.hero-rico h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 1.8rem;
+.hero .subtitle,
+.hero-rico .subtitle {
+  font-size: 1.3rem;
   font-weight: 300;
   margin-bottom: 15px;
 }
 
-.tagline {
-  font-size: 1.2rem;
+.hero .tagline,
+.hero-rico .tagline {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* Botones */
-.btn {
+/* ==================== */
+/* 6. BOTONES */
+/* ==================== */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-sm {
   display: inline-block;
-  padding: 12px 25px;
-  margin: 0 10px;
-  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  border-radius: 30px;
   transition: all 0.3s ease;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
+  margin: 0 10px;
 }
 
 .btn-primary {
@@ -107,13 +157,13 @@ body {
 .btn-primary:hover {
   background: #E8E0D5;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-  background: transparent;
+  background: #2D3B2D;
   color: white;
-  border: 2px solid white;
+  border: 2px solid #2D3B2D;
 }
 
 .btn-secondary:hover {
@@ -122,7 +172,33 @@ body {
   transform: translateY(-3px);
 }
 
-/* Secciones */
+/* Botones pequeños (para cards) */
+.btn-sm {
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 0.9rem;
+  background: #C6A961;
+  color: #2D3B2D;
+}
+
+.btn-sm:hover {
+  background: #E8E0D5;
+}
+
+.btn-sm.outline {
+  background: transparent;
+  border: 1px solid #C6A961;
+  color: #C6A961;
+}
+
+.btn-sm.outline:hover {
+  background: #C6A961;
+  color: #2D3B2D;
+}
+
+/* ==================== */
+/* 7. SECCIONES GENERALES */
+/* ==================== */
 .section {
   padding: 80px 0;
   text-align: center;
@@ -139,7 +215,70 @@ body {
   background: #E8E0D5;
 }
 
-/* Catálogo de libros */
+/* ==================== */
+/* 8. BENEFICIOS / TARJETAS */
+/* ==================== */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h4 {
+  color: #2D3B2D;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+/* Responsive: 1 columna en móvil, 2 en tablet */
+@media (max-width: 768px) {
+  .benefits {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+/* ==================== */
+/* 9. TESTIMONIOS */
+/* ==================== */
+.testimonials {
+  max-width: 700px;
+  margin: 50px auto;
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+}
+
+.testimonials strong {
+  color: #2D3B2D;
+}
+
+/* ==================== */
+/* 10. CATÁLOGO DE LIBROS */
+/* ==================== */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -151,7 +290,7 @@ body {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -192,54 +331,47 @@ body {
   padding: 0 15px 15px;
 }
 
-.btn-sm {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 5px;
-  font-size: 0.9rem;
-  border-radius: 20px;
-  text-decoration: none;
-  background: #C6A961;
-  color: #2D3B2D;
-  font-weight: 600;
-}
-
-.btn-sm:hover {
-  background: #E8E0D5;
-}
-
-.btn-sm.outline {
-  background: transparent;
-  border: 1px solid #C6A961;
-  color: #C6A961;
-}
-
-.btn-sm.outline:hover {
-  background: #C6A961;
-  color: #2D3B2D;
-}
-
-/* Formulario */
+/* ==================== */
+/* 11. FORMULARIO */
+/* ==================== */
 form {
-  max-width: 400px;
-  margin: 30px auto;
+  max-width: 500px;
+  margin: 25px auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 form input {
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 1rem;
 }
 
-form button {
-  padding: 12px;
-  font-size: 1rem;
+form button,
+#descarga button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #C6A961;
+  color: #2D3B2D;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
+form button:hover,
+#descarga button:hover {
+  background: #E8E0D5;
+}
+
+/* ==================== */
+/* 12. FOOTER */
+/* ==================== */
 footer {
   text-align: center;
   padding: 30px 0;
@@ -248,7 +380,39 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* ==================== */
+/* 13. RESPONSIVE */
+/* ==================== */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .subtitle { font-size:
+  .hero h1,
+  .hero-rico h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .subtitle,
+  .hero-rico .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero .buttons,
+  .hero-rico .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero .buttons .btn,
+  .hero-rico .buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}
